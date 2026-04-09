@@ -21,13 +21,13 @@ defineProps<{
 <style scoped>
 .idea {
   position: relative;
-  padding: 22px 24px 26px;
+  padding: 14px 16px 16px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--surface);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
   transition: all var(--dur-base) var(--ease-out);
   overflow: hidden;
 }
@@ -37,22 +37,22 @@ defineProps<{
   box-shadow: 0 12px 24px rgba(0,0,0,0.35), 0 0 0 1px var(--orange);
 }
 .idea__index {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--orange);
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 .idea__title {
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 .idea__body {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.4;
   color: var(--text-muted);
 }
 .idea__rule {

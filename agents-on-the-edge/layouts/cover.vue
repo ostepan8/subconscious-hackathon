@@ -12,24 +12,24 @@
           <span class="dot"></span>
           <span>SUBCONSCIOUS × ACM · NORTHEASTERN</span>
           <span class="sep"></span>
-          <span>{{ $slidev.configs.date || '2026 · 04 · 09' }}</span>
+          <span>{{ $slidev.configs.date || '2026 · 04 · 11' }}</span>
         </div>
         <slot />
+        <div class="cover__qr">
+          <span class="mono-tag">DISCORD</span>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&bgcolor=14141a&color=F5F5F7&data=https://discord.gg/g7cVJwQG" alt="Discord QR" />
+        </div>
       </div>
     </div>
 
     <div class="cover__meta">
       <div class="meta__row">
         <span class="mono-tag">HACKATHON</span>
-        <span class="meta__v mono">AGENTS / EDGE / 2H15</span>
-      </div>
-      <div class="meta__row">
-        <span class="mono-tag">DISCORD</span>
-        <span class="meta__v mono">discord.gg/g7cVJwQG</span>
+        <span class="meta__v mono">AGENTS / EDGE / 2H</span>
       </div>
       <div class="meta__row">
         <span class="mono-tag">HOST</span>
-        <span class="meta__v mono">Owen Stepan · Subconscious Systems</span>
+        <span class="meta__v mono">Subconscious Systems</span>
       </div>
     </div>
 
@@ -112,6 +112,23 @@
   max-width: 42ch;
   opacity: 0;
   animation: fade-up 900ms var(--ease-out) 600ms forwards;
+}
+
+.cover__qr {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 36px;
+  opacity: 0;
+  animation: fade-up 900ms var(--ease-out) 750ms forwards;
+}
+.cover__qr .mono-tag { color: var(--text-faint); }
+.cover__qr img {
+  width: 340px;
+  height: 340px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  image-rendering: pixelated;
 }
 
 .cover__meta {

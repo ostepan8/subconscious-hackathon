@@ -38,7 +38,7 @@ defineProps<{ slots: Slot[] }>();
   position: absolute;
   left: 11px;
   top: 12px;
-  bottom: 12px;
+  bottom: 44px;
   width: 1px;
 }
 .rail__line { background: var(--border); }

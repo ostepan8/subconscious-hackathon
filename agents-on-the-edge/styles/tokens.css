@@ -1,0 +1,123 @@
+/* ============================================================
+   Agents on the Edge — Design Tokens
+   Sourced directly from subconscious-monorepo/apps/web:
+     · fonts      → app/layout.tsx        (Manrope + Geist Mono)
+     · palette    → app/globals.css       (HSL variables)
+     · radius     → tailwind.config.ts
+   ============================================================ */
+
+:root {
+  /* ============================================================
+     HSL tokens (match apps/web .dark scheme — dark is default)
+     ============================================================ */
+
+  --h-background:   20 14.3% 4.1%;      /* near-black w/ warm cast   */
+  --h-foreground:   60 9.1% 97.8%;      /* warm off-white            */
+  --h-card:         20 14.3% 6%;        /* slightly raised           */
+  --h-popover:      20 14.3% 4.1%;
+
+  --h-primary:      15 100% 58%;        /* brand orange · #FF5C28-ish */
+  --h-primary-fg:   60 9.1% 97.8%;
+
+  --h-secondary:    74 10% 40%;         /* olive                      */
+  --h-secondary-fg: 74 8% 90%;
+
+  --h-muted:        12 6.5% 15.1%;      /* warm dark gray             */
+  --h-muted-fg:     24 5.4% 63.9%;
+
+  --h-accent:       12 6.5% 15.1%;
+  --h-accent-fg:    60 9.1% 97.8%;
+
+  --h-border:       12 6.5% 15.1%;
+  --h-border-hi:    12 6.5% 22%;
+  --h-input:        12 6.5% 15.1%;
+  --h-ring:         15 64% 48%;
+
+  --h-destructive:  0 72.2% 50.6%;
+
+  /* ============================================================
+     Resolved tokens (what the deck actually uses)
+     ============================================================ */
+
+  --bg:            hsl(var(--h-background));
+  --surface:       hsl(var(--h-card));
+  --surface-2:     hsl(12 6.5% 9%);
+  --surface-3:     hsl(12 6.5% 12%);
+
+  --border:        hsl(var(--h-border));
+  --border-hi:     hsl(var(--h-border-hi));
+
+  --text:          hsl(var(--h-foreground));
+  --text-muted:    hsl(var(--h-muted-fg));
+  --text-faint:    hsl(24 5.4% 38%);
+
+  --orange:        hsl(var(--h-primary));
+  --orange-hi:     hsl(15 100% 65%);
+  --orange-lo:     hsl(var(--h-ring));
+  --orange-glow:   hsla(15, 100%, 58%, 0.45);
+  --orange-wash:   hsla(15, 100%, 58%, 0.08);
+  --orange-line:   hsla(15, 100%, 58%, 0.35);
+
+  --olive:         hsl(var(--h-secondary));
+  --cyan:          hsl(198 93% 74%);
+  --green:         hsl(158 64% 52%);
+
+  /* ============================================================
+     Type (real product families)
+     ============================================================ */
+
+  --font-display:  "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body:     "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:     "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ============================================================
+     Spacing (8px baseline)
+     ============================================================ */
+
+  --s-1: 4px;  --s-2: 8px;  --s-3: 16px; --s-4: 24px;
+  --s-5: 32px; --s-6: 48px; --s-7: 64px; --s-8: 96px; --s-9: 128px;
+
+  /* ============================================================
+     Radius (from apps/web tailwind.config.ts → --radius: 0.5rem)
+     ============================================================ */
+
+  --radius:        8px;     /* lg */
+  --radius-md:     6px;
+  --radius-sm:     4px;
+  --radius-xl:     14px;
+  --radius-2xl:    18px;
+
+  /* ============================================================
+     Motion
+     ============================================================ */
+
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:      240ms;
+  --dur-base:      520ms;
+  --dur-slow:      900ms;
+
+  /* ============================================================
+     Elevation
+     ============================================================ */
+
+  --shadow-card:
+    0 1px 0 hsla(0, 0%, 100%, 0.03) inset,
+    0 8px 30px hsla(0, 0%, 0%, 0.45),
+    0 32px 80px hsla(0, 0%, 0%, 0.35);
+
+  --shadow-glow:
+    0 0 0 1px hsla(15, 100%, 58%, 0.28),
+    0 8px 40px var(--orange-glow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

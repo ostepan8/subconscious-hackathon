@@ -1,0 +1,20 @@
+{
+  "name": "agents-on-the-edge",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export",
+    "export:pdf": "slidev export --format pdf"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "@vueuse/core": "^11.2.0",
+    "@vueuse/motion": "^2.2.6",
+    "vue": "^3.5.13"
+  }
+}

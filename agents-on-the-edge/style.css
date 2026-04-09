@@ -1,0 +1,228 @@
+/* ============================================================
+   Agents on the Edge — Global Stylesheet
+   This is the file Slidev auto-loads.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap");
+@import "./styles/tokens.css";
+
+/* ----- base -------------------------------------------------- */
+
+html,
+body,
+#app {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-feature-settings: "ss01", "ss02", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.slidev-layout {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle dot grid + noise texture on every slide */
+.slidev-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slidev-layout::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/bg/noise.png");
+  background-size: 240px 240px;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slidev-layout > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ----- type scale ------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--text);
+  letter-spacing: -0.032em;
+  line-height: 1.04;
+  font-weight: 800;
+  margin: 0;
+}
+
+h1 { font-size: 112px; letter-spacing: -0.044em; line-height: 0.96; }
+h2 { font-size: 72px;  font-weight: 800; letter-spacing: -0.036em; }
+h3 { font-size: 40px;  font-weight: 700; letter-spacing: -0.024em; }
+
+p, li {
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+strong { color: var(--text); font-weight: 600; }
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 92, 40, 0.25);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+a:hover { border-color: var(--orange); }
+
+code,
+pre,
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ----- scroll bar hide in embedded screenshots -------------- */
+::-webkit-scrollbar { display: none; }
+
+/* ----- universal chrome: eyebrow + page number -------------- */
+
+.slide-eyebrow {
+  position: absolute;
+  top: 72px;
+  left: 112px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-faint);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+.slide-eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 12px var(--orange-glow);
+}
+
+.slide-pagenum {
+  position: absolute;
+  bottom: 56px;
+  right: 112px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  z-index: 10;
+}
+
+.slide-footrule {
+  position: absolute;
+  left: 112px;
+  right: 112px;
+  bottom: 96px;
+  height: 1px;
+  background: var(--border);
+  z-index: 10;
+}
+
+.slide-wordmark {
+  position: absolute;
+  bottom: 56px;
+  left: 112px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-faint);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* ----- utility classes -------------------------------------- */
+
+.stack          { display: flex; flex-direction: column; }
+.row            { display: flex; flex-direction: row; }
+.gap-2          { gap: var(--s-2); }
+.gap-3          { gap: var(--s-3); }
+.gap-4          { gap: var(--s-4); }
+.gap-5          { gap: var(--s-5); }
+.gap-6          { gap: var(--s-6); }
+.muted          { color: var(--text-muted); }
+.faint          { color: var(--text-faint); }
+.orange         { color: var(--orange); }
+.mono-tag       {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.rule {
+  height: 1px;
+  background: var(--border);
+}
+
+/* ----- code block refresh ---------------------------------- */
+
+.slidev-code,
+pre code {
+  background: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px !important;
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-mono) !important;
+}
+
+/* ----- hide slidev dev overlays for a clean deck ----------- */
+/*
+  Slidev 0.50 ships several always-rendered UI bits — the goto
+  dialog, the page-root nav column, and the bottom menu buttons.
+  We collapse them all so the presentation is fullscreen clean.
+*/
+#page-root {
+  grid-template-columns: 1fr !important;
+}
+#page-root > :nth-child(2) {
+  display: none !important;
+}
+#slidev-goto-dialog,
+.slidev-controls,
+.slidev-nav-controls,
+.slidev-page-indicator {
+  display: none !important;
+}
+
+/* ----- shared slide transition ----------------------------- */
+.slide-left-enter-from,
+.slide-left-leave-to { opacity: 0; transform: translateX(32px); }
+.slide-left-enter-active,
+.slide-left-leave-active { transition: all var(--dur-slow) var(--ease-out); }
+
+/* ----- v-click fades (global override) --------------------- */
+.slidev-vclick-hidden  { opacity: 0 !important; transform: translateY(8px); filter: blur(2px); }
+.slidev-vclick-visible { opacity: 1 !important; transform: none;           filter: none;      transition: all var(--dur-base) var(--ease-out); }

@@ -169,7 +169,7 @@ title: "Set-Up"
 
 <h2>Create an <em>API key</em>.</h2>
 
-Head to <a href="https://www.subconscious.dev/">subconscious.dev</a>, make an account, and grab an API key. You'll get <strong>$5 in credits</strong> just for signing up, enough for everything you build today.
+Head to <a href="https://www.subconscious.dev/" target="_blank">subconscious.dev</a>, make an account, and grab an API key. You'll get <strong>$5 in credits</strong> just for signing up, enough for everything you build today.
 
 <div class="setup__steps">
 <div class="step"><span class="step__n mono">01</span><span>Sign up with GitHub or Google</span></div>
@@ -382,7 +382,7 @@ tag: SDK
 n: "07"
 title: "Python SDK"
 kicker: "● SDK · PYTHON"
-heading: "Your first agent,<br/>in <em>ten lines</em>."
+heading: "The <em>SDK</em>,<br/>in ten lines."
 ---
 
 ::left::
@@ -463,7 +463,7 @@ tag: DOCS
 n: "08"
 title: "Docs Overview"
 kicker: "● REFERENCE"
-heading: "Everything you<br/>need, <em>indexed</em>."
+heading: "The <em>docs</em> have<br/>everything."
 ---
 
 ::left::
@@ -484,7 +484,7 @@ stuck, this is the first place you look.
 
 <div class="docs__link">
   <span class="mono-tag">LIVE</span>
-  <a href="https://docs.subconscious.dev/overview" class="mono">docs.subconscious.dev/overview</a>
+  <a href="https://docs.subconscious.dev/overview" target="_blank" class="mono">docs.subconscious.dev/overview</a>
 </div>
 
 ::right::
@@ -541,7 +541,7 @@ tag: INSPIRATION
 n: "09"
 title: "Example Agent Ideas"
 kicker: "● WHAT TO BUILD"
-heading: "Start with what<br/>we're <em>best at</em>."
+heading: "What we're<br/><em>really good</em> at."
 ---
 
 ::left::
@@ -582,7 +582,7 @@ easier time shipping in two hours.
     <span class="mono-tag">● LIVE PROJECTS · BUILT ON SUBCONSCIOUS</span>
   </div>
 
-  <a class="project" href="https://ai-agent-degree-planner.vercel.app/">
+  <a class="project" href="https://ai-agent-degree-planner.vercel.app/" target="_blank">
     <div class="project__num mono">01</div>
     <div>
       <div class="project__title">AI Degree Planner</div>
@@ -590,7 +590,7 @@ easier time shipping in two hours.
     </div>
   </a>
 
-  <a class="project" href="https://resume-tailoring-agent.subconscious.dev/dashboard">
+  <a class="project" href="https://resume-tailoring-agent.subconscious.dev/dashboard" target="_blank">
     <div class="project__num mono">02</div>
     <div>
       <div class="project__title">Resume Tailoring Agent</div>
@@ -598,7 +598,7 @@ easier time shipping in two hours.
     </div>
   </a>
 
-  <a class="project" href="https://subconscious-scheduler.vercel.app/">
+  <a class="project" href="https://subconscious-scheduler.vercel.app/" target="_blank">
     <div class="project__num mono">03</div>
     <div>
       <div class="project__title">School Scheduler</div>
@@ -606,7 +606,7 @@ easier time shipping in two hours.
     </div>
   </a>
 
-  <a class="project" href="https://subconscious-remotion-demo.vercel.app/">
+  <a class="project" href="https://subconscious-remotion-demo.vercel.app/" target="_blank">
     <div class="project__num mono">04</div>
     <div>
       <div class="project__title">Remotion Video Agent</div>
@@ -928,7 +928,7 @@ tag: SUBMISSION
 n: "14"
 title: "Group Submission"
 kicker: "● WHEN TIME IS UP"
-heading: "How to <em>turn in</em><br/>your project."
+heading: "How to <em>submit</em>."
 ---
 
 ::left::

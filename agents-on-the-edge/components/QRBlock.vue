@@ -23,7 +23,7 @@ const qrSrc =
     </div>
     <figcaption class="qr__caption">
       <span class="mono-tag" v-if="caption">{{ caption }}</span>
-      <code class="qr__url">{{ data }}</code>
+      <a :href="data" target="_blank" class="qr__url">{{ data }}</a>
     </figcaption>
   </figure>
 </template>
@@ -66,6 +66,11 @@ const qrSrc =
   font-size: 16px;
   color: var(--text-muted);
   letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.qr__url:hover {
+  color: var(--orange);
 }
 @keyframes scan {
   0%   { transform: translateY(0);     opacity: 0; }

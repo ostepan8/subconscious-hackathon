@@ -17,25 +17,12 @@
         <slot />
         <div class="cover__qr">
           <span class="mono-tag">DISCORD</span>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&bgcolor=14141a&color=F5F5F7&data=https://discord.gg/g7cVJwQG" alt="Discord QR" />
+          <img src="/assets/discord-qr.png" alt="Discord QR" />
+          <a href="https://discord.gg/Ud7M5jXu" target="_blank" class="cover__qr-link mono">discord.gg/Ud7M5jXu</a>
         </div>
       </div>
     </div>
 
-    <div class="cover__meta">
-      <div class="meta__row">
-        <span class="mono-tag">HACKATHON</span>
-        <span class="meta__v mono">AGENTS / EDGE / 2H</span>
-      </div>
-      <div class="meta__row">
-        <span class="mono-tag">HOST</span>
-        <span class="meta__v mono">Subconscious Systems</span>
-      </div>
-    </div>
-
-    <div class="cover__backers">
-      <BackerStrip />
-    </div>
   </div>
 </template>
 
@@ -55,7 +42,7 @@
   align-items: center;
   gap: 48px;
   max-width: 1720px;
-  padding: 0 96px 220px;
+  padding: 0 96px 80px;
   width: 100%;
   z-index: 2;
 }
@@ -116,8 +103,9 @@
 
 .cover__qr {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   margin-top: 36px;
   opacity: 0;
   animation: fade-up 900ms var(--ease-out) 750ms forwards;
@@ -129,6 +117,15 @@
   border-radius: 12px;
   border: 1px solid var(--border);
   image-rendering: pixelated;
+}
+.cover__qr-link {
+  font-size: 18px;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+.cover__qr-link:hover {
+  color: var(--orange);
 }
 
 .cover__meta {
